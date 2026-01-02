@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ixhat</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+    /* --- MOVING PHOTO GRID --- */
+.photo-strip {
+    width: 100%;
+    overflow: hidden;
+    margin: 30px 0 40px;
+}
+
+.photo-track {
+    display: flex;
+    gap: 20px;
+    animation: scroll 40s linear infinite;
+}
+
+.photo-track img {
+    width: 160px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+/* Hover interaction */
+.photo-track img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(160, 80, 255, 0.7);
+}
+
+/* Animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+
+        /* --- GENERAL PAGE STYLING --- */
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0f0f0f, #1b1b1b);
+            font-family: Arial, sans-serif;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        h1, h2 {
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        p {
+            margin: 10px auto;
+            max-width: 700px;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        /* --- NAV BAR --- */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: rgba(20,20,20,0.85);
+            display: flex;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        ul li a {
+            display: block;
+            color: white;
+            padding: 14px 22px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        ul li a:hover {
+            background-color: #444;
+            transform: scale(1.05);
+        }
+
+        ul li a.active {
+            background-color: #6c00ff;
+            border-radius: 3px;
+        }
+
+      
+        /* --- LOGO ANIMATION (PNG-SHAPE GLOW FIX) --- */
+.logo {
+    width: 280px;
+    margin-top: 20px;
+    transition: transform 0.5s, filter 0.5s;
+    filter: drop-shadow(0 0 20px rgba(120, 0, 255, 0.5));
+}
+
+.logo:hover {
+    transform: scale(1.07);
+    filter: drop-shadow(0 0 40px rgba(160, 80, 255, 0.8));
+}
+
+
+        /* --- SECTION ANIMATION (FADE IN) --- */
+        .fade-in {
+            animation: fade 1.3s ease-in-out;
+        }
+
+        @keyframes fade {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+
+        /* --- LIST STYLING --- */
+        ol {
+            width: fit-content;
+            margin: auto;
+            padding: 20px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            backdrop-filter: blur(8px);
+            transition: 0.3s;
+        }
+
+        ol:hover {
+            transform: scale(1.02);
+        }
+
+        ol li a {
+            color: #9f7dff;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        ol li a:hover {
+            color: white;
+            text-shadow: 0 0 10px #bd9aff;
+        }
+
+    </style>
+
+
+</head>
+
+<body class="fade-in">
+
+    <!-- NAVIGATION -->
+    <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="joinUs.html">Join Us</a></li>
+        <li><a href="#store">Store</a></li>
+        <li><a href="artists_page.html">Artists</a></li>
+    </ul>
+
+
+
+    <center>
+        <!-- LOGO -->
+
+        <img src="ixhat small white.png" alt="ixhat logo" class="logo fade-in">
+
+
+        <!-- MAIN TITLE -->
+        <h1 class="fade-in">ixhat</h1>
+
+        <hr style="width: 60%; border: 1px solid rgba(255,255,255,0.2);">
+
+        <!-- WELCOME MESSAGE -->
+        <h2 class="fade-in">WELCOME TO ixhat — you hate art as well? .</h2>
+
+        <!-- MOVING ART PREVIEW STRIP -->
+<div class="photo-strip fade-in">
+    <div class="photo-track">
+        <img src="braxes full.png" alt="art preview">
+        <img src="insta.png" alt="art preview">
+        <img src="conceptual.png" alt="art preview">
+        <img src="ferris wheel.jpg" alt="art preview">
+        <img src="saniya.png" alt="art preview">
+        <img src="fixed or found.png" alt="art preview">
+        <img src="lagos.jpg" alt="art preview">
+        <img src="ghost.png" alt="art preview">
+        <img src="JANA.jpg" alt="art preview">
+        <img src="Beetlejuice exprmnt 2.jpg" alt="art preview">
+
+        <!-- repeat images for smooth looping -->
+        <img src="braxes full.png" alt="art preview">
+        <img src="insta.png" alt="art preview">
+        <img src="conceptual.png" alt="art preview">
+        <img src="ferris wheel.jpg" alt="art preview">
+        <img src="saniya.png" alt="art preview">
+        <img src="fixed or found.png" alt="art preview">
+        <img src="lagos.jpg" alt="art preview">
+        <img src="JANA.jpg" alt="art preview">
+        <img src="Beetlejuice exprmnt 2.jpg" alt="art preview">
+    </div>
+</div>
+
+        <p>Upload your art, explore creators from across the world, and leave your mark in a growing community of visionaries.</p>
+
+        <p>This website is a contemporary approach on the process of creating art. The ideation, the framing, the painting, the misunderstandings and much more. But of all, the tricky nature of being an ambitious artists. This webpage is a visual play on the term "toxic relationships" as artists in toxic relationships with their work. </p>
+
+        <p>If you would like to join, just put your email and we will be in contact.</p>
+
+        <h2>Enjoy the show!</h2>
+
+
+
+    </center>
+
+</body>
+
+</html>
